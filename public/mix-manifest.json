@@ -1,5 +1,9 @@
 {
-    "/js/all.js": "/js/all.js",
-    "/css/sass.css": "/css/sass.css",
-    "/css/all.css": "/css/all.css"
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/js/misc.js": "/js/misc.js",
+    "/js/off-canvas.js": "/js/off-canvas.js",
+    "/css/vendor.bundle.base.css": "/css/vendor.bundle.base.css",
+    "/css/vendor.bundle.addons.css": "/css/vendor.bundle.addons.css",
+    "/css/materialdesignicons.min.css": "/css/materialdesignicons.min.css"
 }

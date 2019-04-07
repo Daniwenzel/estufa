@@ -9,78 +9,39 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/all.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{asset('css/all.css')}}" rel="stylesheet" >
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/vendor.bundle.addons.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/vendor.bundle.base.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/materialdesignicons.min.css') }}" rel="stylesheet">
+
 </head>
 <body>
-    <div class="container-scroller" id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-
-
-                            <div class="container-scroller">
-                                @include('partials._navbar')
-                                <div class="container-fluid page-body-wrapper">
-                                    @include('partials._sidebar')
-                                    <div class="main-panel">
-                                        @yield('content')
-                                        @include('partials._footer')
-                                    </div>
-                                </div>
-                            </div>
-<!--
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
--->
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+<div id="app" class="container-scroller">
+    @auth
+        @include('partials._navbar')
+        <div class="container-fluid page-body-wrapper">
+            @include('partials._sidebar')
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    @yield('content')
                 </div>
+                @include('partials._footer')
             </div>
-        </nav>
+        </div>
+    @else
+        @yield('content')
+    @endauth
+</div>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
+<script src="{{ asset('js/app.js') }}" defer></script>
+<script src="{{ asset('js/off-canvas.js') }}" defer></script>
+<script src="{{ asset('js/misc.js') }}" defer></script>
+
 </body>
 </html>

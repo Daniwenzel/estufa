@@ -11,15 +11,14 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('auth/login');
+Route::get('/', function () {
+    return view('auth.login');
 });
 
-Route::get('/admin', function() {
-    return view('master');
-});*/
+Auth::routes(['register' => false]);
 
+Route::middleware('web')->group(function() {
+    Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/manage', 'UserController@showManageUser')->name('show.manage');
+});
