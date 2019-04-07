@@ -21,4 +21,6 @@ Route::middleware('web')->group(function() {
     Route::get('/home', 'HomeController@index')->name('home');
 
     Route::get('/manage', 'UserController@showManageUser')->name('show.manage');
+
+    Route::post('/insertdata', 'SensorController@postSensorData')->name('post.data');
 });

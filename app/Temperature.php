@@ -9,10 +9,10 @@ class Temperature extends Model
     protected $table = 'temperatures';
 
     protected $fillable = [
-        'sensor_id', 'leitura'
+        'sensor_topic', 'leitura'
     ];
 
     public function sensor() {
-        $this->belongsTo('App\Sensor', 'sensor_id', 'id');
+        $this->belongsTo('App\Sensor', 'sensor_topic', 'topic');
     }
 }

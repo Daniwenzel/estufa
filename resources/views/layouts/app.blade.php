@@ -42,6 +42,8 @@
 <script src="{{ asset('js/app.js') }}" defer></script>
 <script src="{{ asset('js/off-canvas.js') }}" defer></script>
 <script src="{{ asset('js/misc.js') }}" defer></script>
+<script src="{{ asset('js/paho-mqtt.js') }}" defer></script>
+<script src="{{ asset('js/mqtt-client.js') }}" defer></script>
 
 </body>
 </html>

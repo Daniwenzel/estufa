@@ -16,10 +16,11 @@ class CreateHumiditiesTable extends Migration
         Schema::create('humidities', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->double('leitura');
-            $table->unsignedBigInteger('sensor_id');
+            $table->string('sensor_topic');
             $table->timestamps();
 
-            $table->foreign('sensor_id')->references('id')->on('sensors');        });
+            $table->foreign('sensor_topic')->references('topic')->on('sensors');
+        });
     }
 
     /**
