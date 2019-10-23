@@ -39,11 +39,14 @@
     @endauth
 </div>
 
-<script src="{{ asset('js/app.js') }}" defer></script>
-<script src="{{ asset('js/off-canvas.js') }}" defer></script>
-<script src="{{ asset('js/misc.js') }}" defer></script>
-<script src="{{ asset('js/paho-mqtt.js') }}" defer></script>
-<script src="{{ asset('js/mqtt-client.js') }}" defer></script>
+
+<script src="{{ asset('js/app.js') }}" type="text/javascript" ></script>
+<script src="{{ asset('js/off-canvas.js') }}" type="text/javascript" defer></script>
+<script src="{{ asset('js/misc.js') }}" type="text/javascript" defer></script>
+<script src="{{ asset('js/paho-mqtt.js') }}" type="text/javascript" defer></script>
+<script src="{{ asset('js/mqtt-client.js') }}" type="text/javascript" defer></script>
+<script src="{{ asset('js/graficos.js') }}" type="text/javascript" defer></script>
+@stack('scripts')
 
 </body>
 </html>

@@ -16934,7 +16934,7 @@ ul li {
 /* Auth */
 
 .auth.auth-bg-1 {
-  background: url("/public/images/auth/bg_2.jpg");
+  background: url("/images/auth/bg_2.jpg");
   background-size: cover;
 }
 
@@ -17174,7 +17174,7 @@ ul li {
 }
 
 .auth.theme-two .banner-section .slide-content.bg-1 {
-  background: url("/public/images/auth/bg_2.jpg") no-repeat center center;
+  background: url("/images/auth/bg_2.jpg") no-repeat center center;
   background-size: cover;
 }
 

@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "chart.js": "^2.8.0",
         "compass-mixins": "^0.12.10",
         "paho-mqtt": "^1.1.0"
     }

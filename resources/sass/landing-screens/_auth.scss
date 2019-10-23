@@ -2,7 +2,7 @@
 
 .auth {
 	&.auth-bg-1 {
-		background: url("/public/images/auth/bg_2.jpg");
+		background: url("/images/auth/bg_2.jpg");
 		background-size: cover;
 	}
 	&.register-bg-1 {
@@ -199,7 +199,7 @@
 			.slide-content {
 				width: 100%;
 				&.bg-1 {
-					background: url("/public/images/auth/bg_2.jpg") no-repeat center center;
+					background: url("/images/auth/bg_2.jpg") no-repeat center center;
 					background-size: cover;
 				}
 				&.bg-2 {

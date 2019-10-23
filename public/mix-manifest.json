@@ -4,6 +4,7 @@
     "/js/misc.js": "/js/misc.js",
     "/js/off-canvas.js": "/js/off-canvas.js",
     "/js/mqtt-client.js": "/js/mqtt-client.js",
+    "/js/statistic-data.js": "/js/statistic-data.js",
     "/js/paho-mqtt.js": "/js/paho-mqtt.js",
     "/css/vendor.bundle.base.css": "/css/vendor.bundle.base.css",
     "/css/vendor.bundle.addons.css": "/css/vendor.bundle.addons.css",

@@ -16,10 +16,10 @@ class CreateCondutivitiesTable extends Migration
         Schema::create('condutivities', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->double('leitura');
-            $table->string('sensor_topic');
+            $table->unsignedBigInteger('sensor_id');
             $table->timestamps();
 
-            $table->foreign('sensor_topic')->references('topic')->on('sensors');
+            $table->foreign('sensor_id')->references('id')->on('sensors');
         });
     }
 

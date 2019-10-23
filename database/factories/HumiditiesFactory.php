@@ -1,10 +1,12 @@
 <?php
 
 use Faker\Generator as Faker;
+use Carbon\Carbon;
 
 $factory->define(App\Humidity::class, function (Faker $faker) {
     return [
-        'sensor_topic' => 'sensor/umidade',
-        'leitura' => $faker->randomFloat($nbMaxDecimals = NULL, $min = 0, $max = 100)
+        'sensor_id' => 2,
+        'leitura' => $faker->randomFloat($nbMaxDecimals = NULL, $min = 0, $max = 100),
+        'created_at' => new Carbon()
     ];
 });

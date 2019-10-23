@@ -4,7 +4,7 @@
             <div class="nav-link">
                 <div class="user-wrapper">
                     <div class="profile-image">
-                        <img src="images/faces/face1.jpg" alt="profile image">
+                        <img src="{{ asset('images/faces/face1.jpg') }}" alt="profile image">
                     </div>
                     <div class="text-wrapper">
                         <p class="profile-name">{{ \Illuminate\Support\Facades\Auth::user()->name }}</p>
@@ -22,28 +22,14 @@
         <li class="nav-item">
             <a class="nav-link" href="{{ route('home') }}">
                 <i class="menu-icon mdi mdi-television"></i>
-                <span class="menu-title">Dashboard</span>
+                <span class="menu-title">{{ __('Dashboard') }}</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <i class="menu-icon mdi mdi-content-copy"></i>
-                <span class="menu-title">Sensores</span>
-                <i class="menu-arrow"></i>
+            <a class="nav-link" href="{{ route('greenhouse.list') }}">
+                <i class="menu-icon mdi mdi-barley"></i>
+                <span class="menu-title">{{ __('Estufas') }}</span>
             </a>
-            <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/ui-features/buttons.html">{{ __("Temperatura") }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/ui-features/typography.html">{{ __("Umidade") }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/ui-features/typography.html">{{ __("Condutividade Elétrica") }}</a>
-                    </li>
-                </ul>
-            </div>
         </li>
     </ul>
 </nav>

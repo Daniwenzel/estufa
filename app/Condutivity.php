@@ -9,10 +9,10 @@ class Condutivity extends Model
     protected $table = 'condutivities';
 
     protected $fillable = [
-        'sensor_topic', 'leitura'
+        'sensor_id', 'leitura'
     ];
 
     public function sensor() {
-        $this->belongsTo('App\Sensor', 'sensor_topic', 'topic');
+        return $this->belongsTo('App\Sensor', 'sensor_id', 'id');
     }
 }

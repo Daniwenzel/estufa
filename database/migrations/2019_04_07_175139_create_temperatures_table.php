@@ -16,10 +16,10 @@ class CreateTemperaturesTable extends Migration
         Schema::create('temperatures', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->double('leitura');
-            $table->string('sensor_topic');
+            $table->unsignedBigInteger('sensor_id');
             $table->timestamps();
 
-            $table->foreign('sensor_topic')->references('topic')->on('sensors');
+            $table->foreign('sensor_id')->references('id')->on('sensors');
         });
     }
 
